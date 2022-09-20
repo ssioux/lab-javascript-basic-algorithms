@@ -57,11 +57,12 @@ for (let i = 0; i < hacker1.length; i++) {
   }
 }
 
-// BONUS 1
+// --------------------------------- BONUS 1
 
 let paragraph =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis egestas nulla eu congue. Vestibulum ac aliquam ante. Duis pellentesque ut nisi a volutpat. Vestibulum non justo ut augue mollis posuere ut non purus. Aliquam diam enim, molestie volutpat porta vitae, molestie vitae erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim condimentum felis tincidunt sagittis. Donec vitae blandit lectus, et suscipit urna. In ac iaculis nibh. Duis ut accumsan lacus, nec molestie velit. Vestibulum tincidunt sem ac ex ultricies consequat. Ut egestas ac turpis sed malesuada. Nullam ac varius quam. Integer sit amet risus vulputate, interdum arcu eget, consectetur nulla.";
 
+// Bonis 1.1
 let cantPalabras = 0;
 let space = " ";
 let lastChar = undefined;
@@ -77,6 +78,8 @@ for (i = 0; i < paragraph.length; i++) {
 
 console.log(cantPalabras);
 
+// Bonus 1.2
+
 let etTimes = 0;
 
 for (i = 0; i < paragraph.length; i++) {
@@ -86,4 +89,51 @@ for (i = 0; i < paragraph.length; i++) {
 }
 console.log(etTimes);
 
-// Bonus 2
+//  --------------------------------  BONUS 2
+
+let phraseToCheck = "Amor, Roma";
+
+let counterFow = "";
+
+
+for (let i = 0; i < phraseToCheck.length; i++) {
+  
+    if (phraseToCheck[i] === ",") {
+      continue;
+    } else if (phraseToCheck[i] === " ") {
+      continue;
+    } else if (phraseToCheck[i] === "!") {
+      continue;
+    } else {
+    counterFow += phraseToCheck[i];
+   
+    }
+  }
+
+let counterInv = "";
+
+for (let j = phraseToCheck.length -1; j >= 0; j--) {
+  
+    if (phraseToCheck[j] === ",") {
+      continue;
+    } else if (phraseToCheck[j] === " ") {
+      continue;
+    } else if (phraseToCheck[j] === "!") {
+      continue;
+    } else {
+    counterInv += phraseToCheck[j];
+   
+    }
+  }
+  
+let cap1 = counterInv.toUpperCase();
+let cap2 = counterFow.toUpperCase();
+ 
+console.log(cap1);
+console.log(cap2);
+
+if (cap1 == cap2){
+  console.log(`${phraseToCheck} es Palindrome`)
+} else if (cap1 != cap2){
+  console.log(`${phraseToCheck} no es Palindrome`)
+}
